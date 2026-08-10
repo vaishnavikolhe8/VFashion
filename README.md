@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+
+=======
 👗 FashionAppReact
 
 A modern and responsive fashion e-commerce website built with React.js. The application allows users to browse fashion products by category, view product information, add products to a shopping cart, manage quantities, and persist cart data using LocalStorage.
