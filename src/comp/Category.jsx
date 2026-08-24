@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import { categories } from '../assets/assets.js'
+import { categories } from '../../public/assets/assets.js'
 import { Link } from 'react-router-dom'
 
 const Category = () => {

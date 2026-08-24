@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import tagLogo from "../assets/tag.png";
+import tagLogo from "../../public/assets/tag.png";
 import { useClerk, useUser, UserButton } from '@clerk/clerk-react';
 import { FaShoppingCart } from "react-icons/fa";
 import ProductCard from './ProductCard';
