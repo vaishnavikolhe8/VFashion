@@ -5,7 +5,7 @@ export default function Footer() {
                 
                 <div className="max-w-96">
                    
-                    <img src="/src/assets/tag.png" alt="" width="157" height="40"/>
+                    <img src="/assets/tag.png" alt="" width="157" height="40"/>
                     <p className="mt-6 text-sm text-gray-500">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
                     </p>

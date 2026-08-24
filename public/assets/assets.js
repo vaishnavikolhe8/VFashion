@@ -1,47 +1,47 @@
 export const categories = [
   {
     name: "BAGS",
-    image: "/src/assets/purse.png",
+    image: "/assets/purse.png",
     slug: "womens-bags",
   },
   {
     name: "DRESSES",
-    image: "/src/assets/dress.png",
+    image: "/assets/dress.png",
     slug: "womens-dresses",
   },
   {
     name: "TOPS",
-    image: "/src/assets/sports-bra.png",
+    image: "/assets/sports-bra.png",
     slug: "tops",
   },
   {
     name: "HEELS",
-    image: "/src/assets/high-heel.png",
+    image: "/assets/high-heel.png",
     slug: "womens-shoes",
   },
   {
     name: "JWELLERY",
-    image: "/src/assets/necklace.png",
+    image: "/assets/necklace.png",
     slug: "womens-jewellery",
   },
   {
     name: "PERFUME",
-    image: "/src/assets/perfume.png",
+    image: "/assets/perfume.png",
     slug: "fragrances",
   },
   {
     name: "SKIN_CARE",
-    image: "/src/assets/glowing-skin.png",
+    image: "/assets/glowing-skin.png",
     slug: "skin-care",
   },
   {
     name: "SUNGLASSES",
-    image: "/src/assets/sunglasses.png",
+    image: "/assets/sunglasses.png",
     slug: "sunglasses",
   },
   {
     name: "WATCHES",
-    image: "/src/assets/hand-watch.png",
+    image: "/assets/hand-watch.png",
     slug: "womens-watches",
   },
 ];

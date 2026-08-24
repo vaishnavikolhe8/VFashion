@@ -11,7 +11,7 @@ export default function About() {
             <section className="flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4">
                 <div className="relative shadow-2xl shadow-indigo-600/40 rounded-2xl overflow-hidden shrink-0">
                     <img className="max-w-lg w-full object-cover rounded-2xl"
-                        src="/src/assets/aboutimage.webp"
+                        src="/assets/aboutimage.webp"
                         alt="" />
                    
                 </div>
