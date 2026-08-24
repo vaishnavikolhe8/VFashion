@@ -6,8 +6,8 @@ import { useCart } from '../api/ContextApi';
 const Item = () => {
     const [products, setProducts] = useState([]);
     const { category } = useParams()
-    const {getCartItem} = useCart()
-    
+    const { getCartItem } = useCart()
+
 
     const getDataInfo = async (category) => {
         try {
@@ -22,7 +22,8 @@ const Item = () => {
         getDataInfo(category)
     }, [category])
 
-        // Increase Quantity
+
+    // Increase Quantity
     const increase = (id) => {
         setQuantity((prev) => ({
             ...prev,
@@ -39,41 +40,63 @@ const Item = () => {
     };
 
     return (
-        <div className='flex flex-col border-2 w-full h-3/4 p-3 gap-2 m-auto'>
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
             {products.map((product) => (
                 <div
                     key={product.id}
-                    className="flex flex-col sm:flex-row gap-4 border rounded-lg p-4"
+                    className="flex flex-col sm:flex-row gap-6 border border-gray-200 rounded-2xl p-5 sm:p-6 mb-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
+
                     {/* Image */}
-                    <div className="w-full sm:w-1/3 border p-2">
+                    <div className="w-full sm:w-1/3 h-64 sm:h-72 border border-gray-100 rounded-xl p-3 bg-gray-50 flex items-center justify-center overflow-hidden">
                         <img
                             src={product.images[0]}
                             alt={product.title}
-                            className="w-full h-full object-fit"
+                            className="w-full h-full object-contain rounded-lg"
                         />
                     </div>
 
                     {/* Information */}
-                    <div className="w-full">
-                        <h1 className="text-xl font-bold">{product.title}</h1>
-                        <h3>⭐ Rating: {product.rating}</h3>
-                        <h2 className="font-semibold">Price: ${product.price}</h2>
-                        <p className="my-2">{product.description}</p>
-                        <h3>Shipping: {product.shippingInformation}</h3>
+                    <div className="w-full flex flex-col justify-center">
 
-                        <div className="mt-4 flex gap-4">
-                            <button className="px-4 py-2 bg-black text-white rounded" onClick={()=>{ getCartItem(product);
-                                alert("Item added to Cart")}
-                                }>
+                        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                            {product.title}
+                        </h1>
+
+                        <h3 className="text-sm text-gray-600 mb-2">
+                            ⭐ Rating: {product.rating}
+                        </h3>
+
+                        <h2 className="text-xl font-bold text-gray-900 mb-3">
+                            Price: ${product.price}
+                        </h2>
+
+                        <p className="my-2 text-sm sm:text-base text-gray-600 leading-relaxed">
+                            {product.description}
+                        </p>
+
+                        <h3 className="text-sm text-gray-600 mt-2">
+                            Shipping: {product.shippingInformation}
+                        </h3>
+
+                        <div className="mt-5 flex gap-4">
+                            <button
+                                className="px-6 py-2.5 bg-black text-white rounded-lg font-medium hover:bg-gray-800 active:scale-95 transition-all duration-200 shadow-sm"
+                                onClick={() => {
+                                    getCartItem(product);
+                                    alert("Item added to Cart")
+                                }}
+                            >
                                 Add to Cart
                             </button>
                         </div>
+
                     </div>
+
                 </div>
             ))}
         </div>
-
     );
 };
 
